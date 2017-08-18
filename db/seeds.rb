@@ -26,20 +26,19 @@ queries = [
   'chicken', 'eggs', 'steak', 'salmon', 'tuna', 'bean', 'tofu', 'lettuce', 'beet', 'carrot', 'celery', 'spinach', 'broccoli', 'radish', 'tomato', 'garlic', 'onion', 'milk', 'butter', 'cottage cheese', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'apple', 'orange', 'banana', 'blueberry', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'oregeno', 'sage', 'saffire', 'cumin', 'paprika', 'parsley', 'olive oil', 'vinegar'
 ]
 
- lettuce["hits"][1]["recipe"]["label"]
-
 queries.each do |query|
-  recipe_data = HTTParty.get("https://api.edamam.com/search?q=query&#{app_id}&app_key=#{app_key}")
+  recipe_data = HTTParty.get("https://api.edamam.com/search?q=#{query}&#{app_id}&app_key=#{app_key}")
   recipe_data["hits"].each do |recipe|
     new_recipe = Recipe.create!(
-      name: recipe["recipe"]["label"]
-      directions: recipe["recipe"]["url"]
+      name: recipe["recipe"]["label"],
+      directions: recipe["recipe"]["url"],
       photo_url: recipe["recipe"]["image"]
       )
-    new_ingredient = Ingredient.create!(
-      name: recipe["recipe"]["ingredients"]["text"]
-      type: recipe["recipe"]["ingredients"]["weight"]
-      recipe: new_recipe
-    )
+      recipe["recipe"]["ingredients"].each do |ingredient|
+      new_ingredient = Ingredient.create!(
+        name: ingredient["text"],
+        recipe: new_recipe
+      )
+    end
   end
 end
