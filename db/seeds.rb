@@ -8,9 +8,34 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-recipe1= Recipe.create(name:"Pokr Adobo", directions:"", photo_url:"")
-recipe2 = Recipe.create(name:"Buffalo Wings", directions:"", photo_url:"")
+# recipe1= Recipe.create(name:"Pokr Adobo", directions:"", photo_url:"")
+# recipe2 = Recipe.create(name:"Buffalo Wings", directions:"", photo_url:"")
+#
+#
+# ingredient1= Ingredient.create(name:"pork", type:"", recipe: recipe1)
+# ingredient2 = Ingredient.create(name:"chicken wings", type:"", recipe: recipe2)
 
 
-ingredient1= Ingredient.create(name:"pork", type:"", recipe: recipe1)
-ingredient2 = Ingredient.create(name:"chicken wings", type:"", recipe: recipe2)
+app_id = '15986f01'
+app_key = 'cf226836999d88e4e6e9f3c420c490ec'
+
+queries = [
+  'chicken', 'eggs', 'steak', 'salmon', 'tuna', 'bean', 'tofu', 'lettuce', 'beet', 'carrot', 'celery', 'spinach', 'broccoli', 'radish', 'tomato', 'garlic', 'onion', 'milk', 'butter', 'cottage cheese', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'apple', 'orange', 'banana', 'blueberry', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'oregeno', 'sage', 'saffire', 'cumin', 'paprika', 'parsley', 'olive oil', 'vinegar'
+]
+
+queries.each do |query|
+  recipe_data = HTTParty.get("https://api.edamam.com/search?q=#{query}&#{app_id}&app_key=#{app_key}")
+  recipe_data["hits"].each do |recipe|
+    new_recipe = Recipe.create!(
+      name: recipe["recipe"]["label"],
+      directions: recipe["recipe"]["url"],
+      photo_url: recipe["recipe"]["image"]
+      )
+      recipe["recipe"]["ingredients"].each do |ingredient|
+      new_ingredient = Ingredient.create!(
+        name: ingredient["text"],
+        recipe: new_recipe
+      )
+    end
+  end
+end

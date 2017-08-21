@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20170818200229) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type"
     t.bigint "recipe_id"
     t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
   end
