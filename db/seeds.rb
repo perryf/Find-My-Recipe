@@ -19,9 +19,6 @@ Ingredient.destroy_all
 app_id = '15986f01'
 app_key = 'cf226836999d88e4e6e9f3c420c490ec'
 
-recipes = []
-ingredients = []
-
 queries = [
   'chicken', 'eggs', 'steak', 'salmon', 'tuna', 'bean', 'tofu', 'lettuce', 'beet', 'carrot', 'celery', 'spinach', 'broccoli', 'radish', 'tomato', 'garlic', 'onion', 'milk', 'butter', 'cottage cheese', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'apple', 'orange', 'banana', 'blueberry', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'oregeno', 'sage', 'saffire', 'cumin', 'paprika', 'parsley', 'olive oil', 'vinegar'
 ]
