@@ -1,0 +1,13 @@
+<%= link_to "Recipes", recipes_path %>
+<%= link_to "Edit Recipe", edit_recipe_path %>
+<%= link_to "Delete Recipe", recipe(@recipe) method: :destroy %>
+<%= link_to "New Ingredient", new_recipe_ingredient_path(@recipe) %>
+
+
+<h1><%= @recipe.name %></h1>
+<% @recipe.ingredients.each do |ingredient| %>
+  <div class="ingredient">
+    <h2><%= link_to ingredient.name, recipe_ingredient_path(@recipe) %></h2>
+
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h2>Edit Artist</h2>
+
+<form action="/recipe/<%= @recipe.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="recipe[name]">Name:</label>
+  <input name="recipe[name]" value="<%= @recipe.name %>">
+
+  <label for="recipe[photo_url]">Photo URL:</label>
+  <input name="recipe[photo_url]" value="<%= @recipe.photo_url %>">
+
+  <label for="recipe[directions]">Directions:</label>
+  <input name="recipe[directions]" value="<%= @recipe.directions %>">
+
+  <input type="submit" value="Create">
+</form>
+
+<form action="/recipes/<%= @recipe.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!">
+</form>

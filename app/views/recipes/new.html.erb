@@ -1,0 +1,15 @@
+<h2>New Recipe</h2>
+
+<form action="/recipes" method="post" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="recipe[name]">Name:</label>
+  <input name="recipe[name]">
+
+  <label for="recipe[photo_url]">Photo URL:</label>
+  <input name="recipe[photo_url]">
+
+  <label for="recipe[directions]">Directions:</label>
+  <input name="recipe[directions]">
+
+  <input type="submit" value="Create">
+</form>

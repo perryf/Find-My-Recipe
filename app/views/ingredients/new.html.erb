@@ -1,0 +1,12 @@
+<h2>New Ingredients</h2>
+
+<form action="/ingredients" method="post" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="ingredient[name]">Name:</label>
+  <input name="ingredient[name]">
+
+  <label for="ingredient[type]">Type:</label>
+  <input name="ingredient[type]">
+
+  <input type="submit" value="Create">
+</form>
