@@ -14,9 +14,17 @@ def new
 end
 
 def create
-  @recipe = Recipe.create!(recipe_params)
+  @recipe = Recipe.new(recipe_params)
 
-  redirect_to "/recipes/#{@recipe.id}"
+  respond_to do |format|
+    if @recipe.save!
+      format.html { redirect_to @recipe, notice: 'Recipe was successfully created.'}
+      format.json { render json: @recipe, status: :created, location: @recipe}
+    else
+      format.html { render :new }
+      format.json { render json: @recipe.errors, status: :unprocessable_entity }
+    end
+  end
 end
 
 def show
@@ -36,7 +44,7 @@ def update
   @recipe = Recipe.find(params[:id])
   @recipe.update(recipe_params)
 
-  redirect_to "/recipes/#{@recipe.id}"
+  redirect_to recipes_path
 end
 
 def destroy
@@ -44,6 +52,11 @@ def destroy
   @recipe.destroy
 
   redirect_to "/recipes"
+end
+
+private
+def recipe_params
+  params.require(:recipe).permit(:name, :directions, :photo_url)
 end
 
 end

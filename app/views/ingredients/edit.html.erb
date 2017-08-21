@@ -1,5 +1,4 @@
-<h2>New Ingredients</h2>
-
+<h1>Edit Ingredient</h1>
 
 <%= form_for [@recipe, @ingredient] do |f| %>
   <%= f.label :name %>
@@ -8,5 +7,5 @@
   <%= f.label :type %>
   <%= f.text_field :type %>
 
-  <%= f.submit %>
+  <%= f.submit %>type
 <% end %>

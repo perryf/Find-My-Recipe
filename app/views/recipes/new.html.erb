@@ -1,15 +1,15 @@
 <h2>New Recipe</h2>
 
-<form action="/recipes" method="post" >
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="recipe[name]">Name:</label>
-  <input name="recipe[name]">
 
-  <label for="recipe[photo_url]">Photo URL:</label>
-  <input name="recipe[photo_url]">
+<%= form_for @recipe do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <label for="recipe[directions]">Directions:</label>
-  <input name="recipe[directions]">
+  <%= f.label :directions %>
+  <%= f.text_field :directions %>
 
-  <input type="submit" value="Create">
-</form>
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.submit "Create" %>
+<% end %>
