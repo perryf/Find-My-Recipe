@@ -1,0 +1,10 @@
+<%= link_to "New", new_recipe_path %>
+
+<h1>The Recipes</h1>
+<% @recipes.each do |recipe| %>
+  <div class="recipe">
+    <h2><%= link_to recipe.name, recipe %></h2>
+      <%= recipe.photo_url %>
+    <img src="<%= recipe.photo_url %>"/>
+  </div>
+<% end %>

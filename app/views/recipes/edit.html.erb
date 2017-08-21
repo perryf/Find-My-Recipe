@@ -1,0 +1,14 @@
+<h2>Edit Recipe</h2>
+
+<%= form_for @recipe do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :directions %>
+  <%= f.text_field :directions %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.submit "Update" %>
+<% end %>
