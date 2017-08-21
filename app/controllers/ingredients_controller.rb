@@ -19,7 +19,7 @@ class IngredientsController < ApplicationController
         format.json { render json: @ingredient}
       end
     end
-  end
+
 
 
     def create
@@ -56,7 +56,6 @@ class IngredientsController < ApplicationController
       @ingredient = Ingredient.find(params[:id])
       respond_to do |format|
         if @ingredient.update!(ingredient_params)
-          if @comment.update!(comment_params)
     format.html {redirect_to [@recipe, @ingredient], notice: 'Ingredient was successfully updated.'}
     format.json {render json: @ingredient}
   else
@@ -66,12 +65,12 @@ class IngredientsController < ApplicationController
   end
 end
 
-def destroy
-    @recipe = Redcipe.find(params[:recipe_id])
-    @ingredient = Ingredient.find(params[:id])
-    @ingredient.destroy
-    redirect_to @recipe
-  end
+# def destroy
+#     @recipe = Redcipe.find(params[:recipe_id])
+#     @ingredient = Ingredient.find(params[:id])
+#     @ingredient.destroy
+#     redirect_to @recipe
+#   end
 
 
     private
