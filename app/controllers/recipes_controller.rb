@@ -13,10 +13,11 @@ def index
     @ingredients = Ingredient.all
     @recipes = Recipe.all
   end
-  respond_to do |format|
-   format.html { render :index }
-   format.json { render json: @recipes}
-  end
+  render json: @recipes
+  # respond_to do |format|
+  #  format.html { render :index }
+  #  format.json { render json: @recipes, include: [:ingredient]}
+  # end
 end
 
 def new
