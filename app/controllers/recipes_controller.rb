@@ -5,6 +5,7 @@ def index
   if params[:search]
     @recipes = []
     @ingredients = Ingredient.search(params[:search])
+    puts params
     @ingredients.each do |ingredient|
       ingredient.recipe.name
       @recipes.push(Recipe.find_by(name: ingredient.recipe.name))
@@ -13,11 +14,11 @@ def index
     @ingredients = Ingredient.all
     @recipes = Recipe.all
   end
-  render json: @recipes
-  # respond_to do |format|
-  #  format.html { render :index }
-  #  format.json { render json: @recipes, include: [:ingredient]}
-  # end
+  # render json: @recipes
+  respond_to do |format|
+   format.html { render :index }
+   format.json { render json: @recipes}
+  end
 end
 
 def new
