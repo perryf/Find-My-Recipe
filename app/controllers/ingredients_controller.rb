@@ -46,6 +46,7 @@ class IngredientsController < ApplicationController
      end
     end
 
+
     def edit
       @recipe = Recipe.find(params[:recipe_id])
       @ingredient = Ingredient.find(params[:id])
@@ -65,12 +66,12 @@ class IngredientsController < ApplicationController
   end
 end
 
-# def destroy
-#     @recipe = Redcipe.find(params[:recipe_id])
-#     @ingredient = Ingredient.find(params[:id])
-#     @ingredient.destroy
-#     redirect_to @recipe
-#   end
+def destroy
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = Ingredient.find(params[:id])
+    @ingredient.destroy
+    redirect_to @recipe
+  end
 
 
     private

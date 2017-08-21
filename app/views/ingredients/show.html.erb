@@ -1,6 +1,5 @@
 <%= link_to "Recipe", recipe_path(@recipe) %>
 <%= link_to "New", new_recipe_ingredient_path %>
-
+<%= link_to "Delete Ingredient", recipe_ingredient_path(@ingredient), method: :delete %>
 
 <h1><%= @ingredient.name %></h1>
-<h2><%= @ingredient.type %></h2>
