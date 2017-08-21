@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'fuzzily'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'httparty', '~> 0.13.7'
 gem 'edamam-ruby'

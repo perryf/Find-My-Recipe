@@ -1,5 +1,23 @@
 <%= link_to "New", new_recipe_path %>
 
+<%= form_tag(recipes_path, :method => 'get') do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search"%>
+  </p>
+<% end %>
+
+<!-- <% @ingredients.each do |ingredient| %>
+  <div class="recipe">
+    <p><%= ingredient.recipe.name %></p>
+  </div>
+<% end %> -->
+
+<!-- <% @ingredients.each do |ingredient| %>
+  <p></p>
+<% end %> -->
+
+
 <h1>The Recipes</h1>
 <% @recipes.each do |recipe| %>
   <div class="recipe">
