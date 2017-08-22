@@ -13,9 +13,10 @@ def index
     @recipes = Recipe.all
   end
   # render json: @recipes
+  @recipes = @recipes.uniq.sort_by{|recipe| recipe["name"]}
   respond_to do |format|
    format.html { render :index }
-   format.json { render json: @recipes}
+   format.json { render json: @recipes, include: [:ingredients]}
   end
 end
 
