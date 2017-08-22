@@ -5,9 +5,7 @@ def index
   if params[:search]
     @recipes = []
     @ingredients = Ingredient.search(params[:search])
-    puts params
     @ingredients.each do |ingredient|
-      ingredient.recipe.name
       @recipes.push(Recipe.find_by(name: ingredient.recipe.name))
     end
   else
