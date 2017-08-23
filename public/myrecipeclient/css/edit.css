@@ -1,0 +1,37 @@
+
+form input {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  padding: 5px 20px 5px 5px;
+  margin-top: 30px;
+}
+.edit_image img {
+ width: 800px;
+ height: 600px;
+}
+.edit_name  {
+  margin-bottom: 0;
+  font-family: 'Kranky', cursive;
+  font-size: 36px;
+  text-align: center;
+}
+.edit_image {
+ width: 800px;
+ height: 600px;
+margin-left: 320px;
+margin-right: 320px;
+}
+.edit_description {
+  width: 800px;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border: none;
+  background-color: orange;
+}
