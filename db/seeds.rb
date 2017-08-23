@@ -31,7 +31,7 @@ queries.each do |query|
       directions: recipe["recipe"]["url"],
       source: recipe["recipe"]["source"],
       photo_url: recipe["recipe"]["image"],
-      health_labels: recipe["recipe"]["healthLabels"] * "" + recipe["recipe"]["dietLabels"] * ""
+      health_labels: recipe["recipe"]["healthLabels"] * ", " + recipe["recipe"]["dietLabels"] * ", "
       )
       recipe["recipe"]["ingredients"].each do |ingredient|
       new_ingredient = Ingredient.create!(
