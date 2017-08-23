@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170818200229) do
     t.string "name", null: false
     t.string "directions"
     t.string "photo_url"
+    t.string "source"
+    t.string "health_labels"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -16,6 +16,7 @@ def index
 
 
   # render json: @recipes
+  @recipes = @recipes.uniq.sort_by{|recipe| recipe["name"]}
   respond_to do |format|
    format.html { render :index }
    format.json { render json: @recipes, include: [:ingredients]}
@@ -45,7 +46,7 @@ def show
 
   respond_to do |format|
    format.html { render :show }
-   format.json { render json: @recipe }
+   format.json { render json: @recipe, include: [:ingredients] }
  end
 end
 
