@@ -1,12 +1,25 @@
 class RecipesController < ApplicationController
 
 def index
-  @recipes = Recipe.all
 
+  if params[:search]
+    @recipes = []
+    @ingredients = Ingredient.search(params[:search])
+    @ingredients.each do |ingredient|
+    @recipes.push(Recipe.find_by(name: ingredient.recipe.name))
+    end
+  else
+    @ingredients = Ingredient.all
+    @recipes = Recipe.all
+  end
+
+
+
+  # render json: @recipes
   respond_to do |format|
    format.html { render :index }
-   format.json { render json: @recipes }
- end
+   format.json { render json: @recipes, include: [:ingredients]}
+  end
 end
 
 def new
@@ -56,7 +69,7 @@ end
 
 private
 def recipe_params
-  params.require(:recipe).permit(:name, :directions, :photo_url)
+  params.require(:recipe).permit(:name, :directions, :photo_url, :search)
 end
 
 end
