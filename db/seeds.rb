@@ -20,7 +20,7 @@ app_id = '15986f01'
 app_key = 'cf226836999d88e4e6e9f3c420c490ec'
 
 queries = [
-  'chicken', 'eggs', 'steak', 'salmon', 'tuna', 'bean', 'tofu', 'lettuce', 'beet', 'carrot', 'celery', 'spinach', 'broccoli', 'radish', 'tomato', 'garlic', 'onion', 'milk', 'butter', 'cottage cheese', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'apple', 'orange', 'banana', 'blueberry', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'oregeno', 'sage', 'saffire', 'cumin', 'paprika', 'parsley', 'olive oil', 'vinegar'
+  'chicken', 'duck', 'eggs', 'steak', 'ground beef', 'bacon', 'chorizo', 'saugage', 'pork', 'clam', 'oyster', 'salmon', 'tuna', 'bean', 'tofu', 'lamb', 'ribs', 'goat', 'seafood', 'turkey', 'peanut', 'walnut', 'almond', 'cashew', 'peacan', 'pistachio', 'pinenut', 'chestnut', 'lettuce', 'beet', 'carrot', 'celery', 'spinach', 'broccoli', 'radish', 'tomato', 'garlic', 'onion', 'kale', 'asparagus', 'cauliflower', 'cabbage', 'peas', 'eggplant', 'turnip', 'brussels sprout', 'artichoke', 'green bean', 'okra', 'leak', 'zucchini', 'chard', 'chili pepper', 'arugula', 'scallion', 'shallot', 'corn', 'jalapeno', 'milk', 'butter', 'cottage cheese', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'chedder', 'pepper jack', 'swiss', 'buttermilk', 'gouda', 'condensed milk', 'coconut milk', 'cream', 'cream cheese', 'feta', 'greek yogurt', 'goat milk', 'apple', 'orange', 'banana', 'blueberry', 'coconut', 'grape', 'stawberry', 'raspberry', 'watermellon', 'lemon', 'lime', 'peach', 'cherry', 'mango', 'pineapple', 'avacado', 'fig', 'apricot', 'grapefruit', 'papaya', 'kiwi', 'blackberry', 'berry', 'cranberry', 'olive', 'cherimoya', 'guava', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'wheat', 'wheat flour', 'tortilla', 'flour', 'cereal', 'brown rice', 'rice noodles', 'barley', 'buckwheat', 'wild rice', 'grits', 'oregeno', 'sage', 'saffire', 'cumin', 'paprika', 'parsley', 'olive oil', 'vinegar', 'yeast', 'pepper', 'salt', 'mustard', 'ketchup', 'sugar', 'honey', 'ginger', 'cinnamon', 'turmeric', 'nutmeg', 'clove', 'coriander', 'fennel', 'powder', 'horseradish', 'basil', 'cilantro', 'bay leaves', 'dill weed', 'lavender', 'rosemary', 'thyme'
 ]
 
 queries.each do |query|
@@ -29,7 +29,9 @@ queries.each do |query|
     new_recipe = Recipe.create!(
       name: recipe["recipe"]["label"],
       directions: recipe["recipe"]["url"],
-      photo_url: recipe["recipe"]["image"]
+      source: recipe["recipe"]["source"],
+      photo_url: recipe["recipe"]["image"],
+      health_labels: recipe["recipe"]["healthLabels"] * "" + recipe["recipe"]["dietLabels"] * ""
       )
       recipe["recipe"]["ingredients"].each do |ingredient|
       new_ingredient = Ingredient.create!(
