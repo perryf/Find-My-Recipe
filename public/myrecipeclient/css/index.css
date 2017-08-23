@@ -57,6 +57,19 @@ footer {
   text-align: center;
 }
 
+.xFilter {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: auto;
+  border: none;
+}
+
+.xFilter:hover {
+  color: red;
+}
+
 div.search {
   text-align: center;
   background-color: black;

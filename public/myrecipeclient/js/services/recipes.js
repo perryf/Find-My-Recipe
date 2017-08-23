@@ -6,7 +6,7 @@ angular.module('myrecipe')
 ])
 
 function RecipeService($resource){
-  return $resource('http://localhost:3000/api/recipes/:id.json', {}, {
+  return $resource('/api/recipes/:id.json', {}, {
     update: {
       method: 'PUT'
     }
