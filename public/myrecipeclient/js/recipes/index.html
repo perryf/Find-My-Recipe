@@ -1,0 +1,50 @@
+<section id='head'>
+  <div class='link_menu'>
+    <a id='head_link' data-ui-sref="recipesNew"> Create New Recipe</a>
+    <a id="head_link" class='search_craving' href="#search" target="_self">Search Craving</a>
+
+  </div>
+</section>
+
+<div class="">
+  <h1 id='title'> What's for Dinner? <h1>
+</div>
+
+<form class="search" data-ng-submit="vm.search(search)">
+  <label for="search">Main Ingredient</label>
+  <input class='submit' type="text" data-ng-model="search">
+  <input class='submit' type="submit" value="Add">
+  <input class='submit' type="button" value="RemoveAll" data-ng-click="vm.removeAll(); search = ''">
+</form>
+
+<form class="filters" data-ng-submit="vm.addFilters(newFilter); newFilter = ''" data-ng-hide="vm.hideFilter">
+  <label for="filter">What else you got?</label>
+  <input class='submit' type="text" data-ng-model="newFilter">
+  <input class='submit' type="submit" value="Add">
+</form>
+
+<ul>
+  <li data-ng-repeat="filter in vm.filters">
+    <span>{{filter}}</span>
+    <button class='submit' data-ng-click="vm.removeFilter($index)">Remove</button>
+  </li>
+</ul>
+
+<div class='title'>
+  <img class='img_title' src="" alt="">
+</div>
+
+<!-- <section class='divide'> </section> -->
+<div class="results_title">
+  <h2 id='search'>Craving Results</h2>
+</div>
+
+<!-- <section class='divide'> </section> -->
+<div class="recipes-container">
+  <div class ='recipes' data-ng-repeat = "recipe in vm.recipes | filter : vm.filterFunction">
+    <a class='link' data-ui-sref="recipesShow({id: recipe.id})">
+      <img class='image' data-ng-src= "{{recipe.photo_url}}" >
+      <p class='recipe'> {{ recipe.name }} </p>
+    </a>
+  </div>
+</div>

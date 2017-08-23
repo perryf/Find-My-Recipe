@@ -1,0 +1,44 @@
+
+section#head {
+  padding-bottom: 5px;
+}
+div.link_menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width: 100%;
+  position: fixed;
+  color: black;
+}
+.show_name {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+}
+.show_image img{
+    padding: 20px;
+background-color: white;
+ margin-left: 420px;
+ margin-right: 420px;
+ width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px 5px #888888;
+
+}
+.show_directions .directions{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+.show_ingredients{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+p {
+  text-align: center;
+  padding-top: 30px;
+}

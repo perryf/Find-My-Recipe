@@ -6,12 +6,15 @@ def index
     @recipes = []
     @ingredients = Ingredient.search(params[:search])
     @ingredients.each do |ingredient|
-      @recipes.push(Recipe.find_by(name: ingredient.recipe.name))
+    @recipes.push(Recipe.find_by(name: ingredient.recipe.name))
     end
   else
     @ingredients = Ingredient.all
     @recipes = Recipe.all
   end
+
+
+
   # render json: @recipes
   @recipes = @recipes.uniq.sort_by{|recipe| recipe["name"]}
   respond_to do |format|

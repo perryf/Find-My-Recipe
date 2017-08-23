@@ -1,0 +1,23 @@
+<section id='head'>
+<div class='link_menu'>
+<div><a id='head_link' data-ui-sref="recipesIndex" style= 'text-decoration: none';>Recipes</a></div><br>
+<div><a id='head_link' data-ui-sref="recipesEdit" style= 'text-decoration: none';> Update Recipe</a></div><br>
+<div><a id='head_link' data-ui-sref="recipesDelete" style= 'text-decoration: none'> Delete Recipe</a></div>
+</div>
+</section>
+
+<div class="show_name">
+  <h1> {{vm.recipe.name}} </h1>
+</div>
+
+<div class="show_image">
+  <img ng-src= "{{vm.recipe.photo_url}}">
+</div>
+
+<div class="show_directions">
+  <p><a class='directions'href="{{ vm.recipe.directions }}"> Instructions </a></p>
+</div>
+
+<div class="show_ingredients" ng-repeat ="ingredient in vm.recipe.ingredients">
+  <p>{{ingredient.name}}</p>
+</div>
