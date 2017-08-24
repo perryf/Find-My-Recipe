@@ -16,6 +16,9 @@
   <div class="input_description">
     <textarea id='test' rows="8" cols="80" form="usrform" placeholder="Description" data-ng-model="vm.recipe.description"></textarea><br>
   </div>
+  <div class="input_ingredient">
+    <textarea id='test' rows="8" cols="80" form="usrform" placeholder="Ingredients" data-ng-model="vm.recipe.ingredients"></textarea><br>
+  </div>
   <div class="buttons">
     <button type="submit" data-ng-click="vm.update()"  >Update</button>
     <button type="submit" data-ng-click="vm.destroy()" >Cancel</button>
@@ -23,7 +26,8 @@
 </form>
 
 <pre>
-  <p class="edit_name">{{vm.recipe.name | json}}</p>
+  <p class="edit_name">{{vm.recipe.name}}</p>
   <p class="edit_image"><img src="{{vm.recipe.photo_url }}" alt=""></p>
-  <textarea class="edit_description" name="name" rows="8" cols="80">{{vm.recipe.description | json}}</textarea>
+  <pre class="edit_description" name="name" rows="8" cols="80">{{vm.recipe.description}}</pre>
+  <pre class="edit_ingredient" name="name" rows="8" cols="80">{{vm.recipe.ingredients}}</pre>
 </pre>
