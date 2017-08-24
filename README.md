@@ -3,22 +3,16 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+** FIND MY RECIPE **
+Description: This application is used to find recipes based on the users inputs of ingredients.
+Member of the Group:
 
-* Ruby version
+-Luis Wiese .- Worked of design and styles of the page.
+-Josue Rosales.- working on angular structure and rails, deploying to Heroku, etc.
+-Perry Fustero.-Working with the API, trimming data, etc.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+**Link to DEPLOYED APP **
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://myrecipex.herokuapp.com/#/recipes
