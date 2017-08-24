@@ -11,36 +11,32 @@
   <p class="subtitle">Type in your ingredients to find a recipe</p>
 </div>
 
-<form class="search" data-ng-submit="vm.search(search)">
-  <label for="search">Main Ingredient</label>
-  <input class='submit' type="text" data-ng-model="search">
-  <input class='submit' type="submit" value="Add">
-  <input class='submit' type="button" value="RemoveAll" data-ng-click="vm.removeAll(); search = ''">
-</form>
+<div class="search">
+  <form class="search" data-ng-submit="vm.search(search)">
+    <label for="search">Main Ingredient</label>
+    <input class='submit' type="text" data-ng-model="search">
+    <input class='submit' type="submit" value="Add">
+    <input class='submit' type="button" value="RemoveAll" data-ng-click="vm.removeAll(); search = ''">
+  </form>
 
-<form class="filters" data-ng-submit="vm.addFilters(newFilter); newFilter = ''" data-ng-hide="vm.hideFilter">
-  <label for="filter">What else you got?</label>
-  <input class='submit' type="text" data-ng-model="newFilter">
-  <input class='submit' type="submit" value="Add">
-</form>
+  <form class="filters" data-ng-submit="vm.addFilters(newFilter); newFilter = ''" data-ng-hide="vm.hideFilter">
+    <label for="filter">What else you got?</label>
+    <input class='submit' type="text" data-ng-model="newFilter">
+    <input class='submit' type="submit" value="Add">
+  </form>
+</div>
 
-<ul>
+<ul id="filters">
   <li data-ng-repeat="filter in vm.filters">
-    <span>{{filter}}</span>
+    <span data-ng-click="vm.removeFilter($index)">{{filter}}</span>
     <button class="xFilter" data-ng-click="vm.removeFilter($index)">X</button>
   </li>
 </ul>
 
-<div class='title'>
-  <img class='img_title' src="" alt="">
-</div>
-
-<!-- <section class='divide'> </section> -->
 <div class="results_title">
-  <h2 id='search'>Craving Results</h2>
+  <h2 id='search'>Results</h2>
 </div>
 
-<!-- <section class='divide'> </section> -->
 <div class="recipes-container">
   <div class ='recipes' data-ng-repeat = "recipe in vm.recipes | filter : vm.filterFunction">
     <a class='link' data-ui-sref="recipesShow({id: recipe.id})">
