@@ -17,15 +17,20 @@ div.link_menu {
   text-align: center;
   font-size: 26px;
 }
-.show_image img{
-    padding: 20px;
-background-color: white;
- margin-left: 420px;
- margin-right: 420px;
- width: 600px;
-  height: 400px;
-  box-shadow: 10px 10px 5px #888888;
 
+.show_image {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.show_image img{
+  display: block;
+  padding: 20px;
+  background-color: #F2F2F2;
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 10px 10px 5px #888888;
 }
 .show_directions .directions{
   text-decoration: none;
