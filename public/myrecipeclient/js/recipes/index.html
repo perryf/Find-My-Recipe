@@ -17,14 +17,14 @@
 <div class="search">
   <form class="search" data-ng-submit="vm.search(search)">
     <label for="search">Main Ingredient</label>
-    <input class='submit' type="text" data-ng-model="search">
+    <input class='submitText' type="text" data-ng-model="search">
     <input class='submit' type="submit" value="Add">
     <input class='submit' type="button" value="RemoveAll" data-ng-click="vm.removeAll(); search = ''">
   </form>
 
   <form class="filters" data-ng-submit="vm.addFilters(newFilter); newFilter = ''" data-ng-hide="vm.hideFilter">
     <label for="filter">What else you got?</label>
-    <input class='submit' type="text" data-ng-model="newFilter">
+    <input class='submitText' type="text" data-ng-model="newFilter">
     <input class='submit' type="submit" value="Add">
   </form>
 </div>

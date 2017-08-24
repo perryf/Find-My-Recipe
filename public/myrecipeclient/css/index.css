@@ -54,9 +54,13 @@ input {
 
 .submit {
   height: 30px;
-  width: 80px;
+  width: 90px;
   font-size: 14px;
   text-align: center;
+}
+
+.submitText {
+  width: 160px;
 }
 
 div.search{
