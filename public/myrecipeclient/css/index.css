@@ -45,11 +45,6 @@ input {
     margin-top: 30px;
 }
 
-footer {
-  background: black;
-  color: white;
-}
-
 .submit {
   height: 30px;
   width: 80px;
@@ -57,7 +52,7 @@ footer {
   text-align: center;
 }
 
-div.search {
+div.search{
   text-align: center;
   background-color: black;
   margin: 0;
@@ -65,7 +60,36 @@ div.search {
   height: auto;
   padding-bottom: 20px;
 }
-
+li {
+  padding-left: 10px;
+}
+#filters {
+  display: flex;
+    background-color: black;
+    list-style: none;
+    font-size: 20px;
+    height: auto;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+#filters:hover {
+  cursor: pointer;
+  color: red;
+}
+.xFilter {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: auto;
+  font-size: 20px;
+  color: white;
+}
+.xFilter:hover {
+  cursor: pointer;
+  color: red;
+}
 label {
   margin-left: 20px;
   font-size: 20px;
@@ -81,20 +105,13 @@ margin: 0 auto;
 background-color: black;
 }
 
-  /*.divide {
-    background-color: orange;
-    height: 20px;
-    width: 100%;
-  }*/
+
 .results_title, h2 {
   background-color: white;
   padding-bottom: 5px;
   padding-top: 5px;
   font-size: 50px;
   text-align: center;
-}
-h2 {
-  margin: 0;
 }
 
 .recipes-container {
@@ -106,7 +123,6 @@ h2 {
 }
 
 .recipes {
-  /*display: inline-table;*/
   margin: 0 auto;
   border: 2px, 0px solid black;
   padding-bottom: 5px;
@@ -136,6 +152,11 @@ h2 {
 .link {
   text-decoration: none;
   color: black;
+}
+
+footer {
+  background: black;
+  color: white;
 }
 
 @media (max-width: 900px) {
