@@ -1,8 +1,8 @@
 <section id='head'>
   <div class='link_menu'>
-  <div><a id='head_link' data-ui-sref="recipesIndex" style= 'text-decoration: none';>Recipes</a></div><br>
-  <div><a id='head_link' data-ui-sref="recipesEdit" style= 'text-decoration: none';> Update Recipe</a></div><br>
-  <div><a id='head_link' data-ui-sref="recipesDelete" style= 'text-decoration: none'> Delete Recipe</a></div>
+    <a id='head_link' data-ui-sref="recipesIndex" style= 'text-decoration: none';>Recipes</a>
+    <a id='head_link' data-ui-sref="recipesEdit" style= 'text-decoration: none';> Update Recipe</a>
+    <a id='head_link' data-ui-sref="recipesDelete" style= 'text-decoration: none'> Delete Recipe</a>
 </div>
 </section>
 
@@ -16,10 +16,12 @@
 
 <div class="show_directions">
   <a class='directions' href="{{ vm.recipe.directions }}">
-    <p>Click here to see full recipe by {{vm.recipe.source}}</p>
-  </a>
+    <p>
+      <a class='directions' href="{{ vm.recipe.directions }}">Click here to see full recipe by {{vm.recipe.source}}</a>
+    </p>
 </div>
 
+<h2 class="ingredients-header">Ingredients</h2>
 <div class="show_ingredients" ng-repeat ="ingredient in vm.recipe.ingredients">
   <p>{{ingredient.name}}</p>
 </div>

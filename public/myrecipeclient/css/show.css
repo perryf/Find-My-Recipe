@@ -1,16 +1,8 @@
 
-section#head {
+section #head {
   padding-bottom: 5px;
 }
-div.link_menu {
-  background-color: rgba(0, 0, 0, 0.9);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  width: 100%;
-  position: fixed;
-  color: black;
-}
+
 .show_name {
   padding-top: 60px;
   padding-bottom: 20px;
@@ -40,7 +32,12 @@ div.link_menu {
   padding: 0;
 }
 
+.directions:hover {
+  color: #F55
+}
+
 .directions p {
+  display: block;
   font-weight: bold;
 }
 .show_ingredients {
@@ -51,13 +48,18 @@ div.link_menu {
   padding: 0;
 }
 
- h2.ingredient {
-  font-family: serif;
-  color: black;
-  font-size: 24px;
+.ingredients-header {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 p {
   text-align: center;
-  padding-top: 30px;
+}
+
+footer {
+  padding: 10px 0 10px;
+  background: black;
+  color: white;
+  width: 100%;
 }
