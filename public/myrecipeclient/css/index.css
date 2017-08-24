@@ -11,6 +11,7 @@ html, body {
   padding-right: 15px;
   font-size: 20px;
   color: white;
+  width: 100%;
   text-decoration: none;
 }
 
@@ -43,11 +44,6 @@ input {
     background-color: red;
     padding: 5px 20px 5px 5px;
     margin-top: 30px;
-}
-
-footer {
-  background: black;
-  color: white;
 }
 
 .subtitle {
@@ -109,7 +105,7 @@ label {
   /*main image*/
 div.title {
 background-size: 100% 100%;
-background-image:url(https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
+background-image:url("https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
 height: 750px;
 width: 100%;
 margin: 0 auto;
@@ -166,8 +162,10 @@ background-color: black;
 }
 
 footer {
+  padding: 0 0 10px;
   background: black;
   color: white;
+  width: 100%;
 }
 
 @media (max-width: 900px) {

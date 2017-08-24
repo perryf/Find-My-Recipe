@@ -32,11 +32,18 @@ div.link_menu {
   margin: 0 auto;
   box-shadow: 10px 10px 5px #888888;
 }
-.show_directions .directions{
+.show_directions .directions {
   text-decoration: none;
   color: black;
   font-size: 24px;
+  margin: 8px;
+  padding: 0;
 }
+
+.directions p {
+  font-weight: bold;
+}
+
  h2.ingredient {
   font-family: serif;
   color: black;

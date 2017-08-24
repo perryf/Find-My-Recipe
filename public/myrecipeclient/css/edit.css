@@ -21,10 +21,10 @@ form input {
   text-align: center;
 }
 .edit_image {
- width: 800px;
- height: 600px;
-margin-left: 320px;
-margin-right: 320px;
+  width: 800px;
+  height: 600px;
+  margin-left: 320px;
+  margin-right: 320px;
 }
 .edit_description {
   width: 800px;
@@ -34,4 +34,8 @@ margin-right: 320px;
   margin-right: 300px;
   border: none;
   background-color: orange;
+}
+
+#head {
+  width: 100%;
 }

@@ -15,7 +15,9 @@
 </div>
 
 <div class="show_directions">
-  <p><a class='directions'href="{{ vm.recipe.directions }}"> Instructions </a></p>
+  <a class='directions' href="{{ vm.recipe.directions }}">
+    <p>Click here to see full recipe by {{vm.recipe.source}}</p>
+  </a>
 </div>
 
 <div class="show_ingredients" ng-repeat ="ingredient in vm.recipe.ingredients">
