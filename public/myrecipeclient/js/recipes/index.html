@@ -1,7 +1,7 @@
 <section id='head'>
   <div class='link_menu'>
     <a id="head_link" data-ui-sref="recipesNew"> Create New Recipe</a>
-    <a id="head_link" class="search_craving" href="#search" target="_self">Search by Ingredient</a>
+    <a id="head_link" class="search_craving" href="#search-bar" target="_self">Search by Ingredient</a>
   </div>
 </section>
 
@@ -13,7 +13,7 @@
   <img class="img_title">
 </div>
 
-<div class="search">
+<div id="search-bar" class="search">
   <p class="subtitle">Type in your ingredients to find a recipe</p>
   <form class="search" data-ng-submit="vm.search(search)">
     <label for="search">Main Ingredient</label>
