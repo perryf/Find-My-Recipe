@@ -20,7 +20,7 @@ app_id = '15986f01'
 app_key = 'cf226836999d88e4e6e9f3c420c490ec'
 
 queries = [
-  'chicken', 'duck', 'eggs', 'steak', 'ground beef', 'bacon', 'sausage', 'pork', 'salmon', 'tuna', 'bean', 'tofu', 'lamb', 'ribs', 'goat', 'seafood', 'turkey', 'peanut', 'almond', 'cashew', 'spinach', 'broccoli', 'tomato', 'garlic', 'onion', 'kale', 'cabbage', 'peas', 'eggplant', 'turnip', 'brussels sprout', 'zucchini', 'arugula', 'corn', 'jalapeno', 'milk', 'butter', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'cheddar', 'coconut milk', 'feta', 'apple', 'orange', 'banana', 'coconut', 'lemon', 'lime', 'avocado', 'fig', 'cranberry', 'olive', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'wheat', 'tortilla', 'spaghetti', 'shells', 'crab', 'gnocchi', 'pasta', 'mint', 'beef chunk', 'chicken breast', 'ham’
+  'chicken', 'duck', 'eggs', 'steak', 'ground beef', 'bacon', 'sausage', 'pork', 'salmon', 'tuna', 'bean', 'tofu', 'lamb', 'ribs', 'goat', 'seafood', 'turkey', 'peanut', 'almond', 'cashew', 'spinach', 'broccoli', 'tomato', 'garlic', 'onion', 'kale', 'cabbage', 'peas', 'eggplant', 'turnip', 'brussels sprout', 'zucchini', 'arugula', 'corn', 'jalapeno', 'milk', 'butter', 'mozzarella', 'parmesan', 'sour cream', 'yogurt', 'butter', 'cheddar', 'coconut milk', 'feta', 'apple', 'orange', 'banana', 'coconut', 'lemon', 'lime', 'avocado', 'fig', 'cranberry', 'olive', 'bread', 'breadcrumbs', 'rice', 'quinoa', 'noodles', 'couscous', 'wheat', 'tortilla', 'spaghetti', 'shells', 'crab', 'gnocchi', 'pasta', 'mint', 'beef chunk', 'chicken breast', 'ham'
 ]
 
 queries.each do |query|
