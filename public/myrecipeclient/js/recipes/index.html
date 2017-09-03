@@ -30,9 +30,8 @@
 </div>
 
 <ul id="filters">
-  <li data-ng-repeat="filter in vm.filters">
-    <span data-ng-click="vm.removeFilter($index)">{{filter}}</span>
-    <button class="xFilter" data-ng-click="vm.removeFilter($index)">X</button>
+  <li id="filter" data-ng-repeat="filter in vm.filters">
+    <p data-ng-click="vm.removeFilter($index)">{{filter}} <em class="xFilter">X</em></p>
   </li>
 </ul>
 
