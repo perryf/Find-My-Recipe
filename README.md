@@ -20,7 +20,7 @@
 
 ## List of Technologies Used
 
-  Ruby, Rails, Angular, Javascript, HTML, CSS, Heroku, Git/Github
+  Ruby, Rails, Angular, Javascript, Web APIs, MongoDB, HTML, CSS, Heroku, Git/Github
 
 ## Installation Instructions / Getting Started
 
