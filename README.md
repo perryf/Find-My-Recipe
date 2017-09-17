@@ -6,9 +6,9 @@
   * Enter your main ingredient into the search field, then filter by subsequent ingredients.  
 
   *Members of the Group:*
+  * Perry Fustero - Worked with the API, search functionality, etc.
   * Luis Wiese - Worked of design and styles of the page, and rails template, etc.
   * Josue Rosales - Worked on angular structure and rails, deploying to Heroku, etc.
-  * Perry Fustero - Worked with the API, search functionality, etc.
 
 ## List of Features / User Stories
 
@@ -20,7 +20,7 @@
 
 ## List of Technologies Used
 
-  Ruby, Rails, Angular, Javascript, Web APIs, MongoDB, HTML, CSS, Heroku, Git/Github
+  Ruby, Rails, AngularJS, Javascript, Web APIs, MongoDB, HTML, CSS, Heroku, Git/Github
 
 ## Installation Instructions / Getting Started
 
