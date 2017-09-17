@@ -3,10 +3,12 @@ angular
 .controller('RecipesIndexController',[
   'RecipesFactory',
   '$state',
+  '$location',
+  '$anchorScroll',
   RecipesIndexControllerFunction
 ])
 
-function RecipesIndexControllerFunction(RecipesFactory){
+function RecipesIndexControllerFunction(RecipesFactory, $state, $location, $anchorScroll){
   var query = ''
   this.filters = []
   this.hideFilter = true
@@ -17,6 +19,8 @@ function RecipesIndexControllerFunction(RecipesFactory){
       search: query
     })
     this.hideFilter = false
+    $location.hash('scroll')
+    $anchorScroll()
   }
 
   this.removeAll = function () {
@@ -37,6 +41,8 @@ function RecipesIndexControllerFunction(RecipesFactory){
       this.filters.push(search)
       search = ''
     }
+    $location.hash('scroll')
+    $anchorScroll()
   }
 
   this.filterFunction = function (recipe) {
